@@ -42,7 +42,7 @@ start = time.perf_counter()
 
 res = []
 for i in range(n):
-    res.append(naiveSearch(reference, queries_100[i]))
+    res.append(naiveSearch(reference, n_queries[i]))
 # print(len(querys_100)) # 100 000 querys
 # print(res)
 
