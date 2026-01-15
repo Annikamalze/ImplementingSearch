@@ -9,7 +9,20 @@
 
 // prints out all occurences of query inside of ref
 void findOccurences(std::vector<seqan3::dna5> const& ref, std::vector<seqan3::dna5> const& query) {
-    //!TODO ImplementMe
+    if(query.empty() || ref.size() < query.size()) {
+    return;
+    }
+
+    std::vector<size_t> positions;
+    size_t m = query.size();
+
+    for(size_t i = 0; i <= ref.size() - m; ++i) {
+        if(std::equal(query.begin(), query.end(), ref.begin() + i)) {
+            positions.push_back(i);
+        }
+        return positions;
+    }
+    
 }
 
 int main(int argc, char const* const* argv) {
