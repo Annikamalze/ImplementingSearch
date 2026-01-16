@@ -49,5 +49,5 @@ for i in range(n):
 end = time.perf_counter()
 
 runtime = end - start
-print(f"runtime for {n} queries: runtime")
+print(f"runtime for {n} queries: {runtime:.2f}")
 print(f"first 50 matches: {res[:10]}")
